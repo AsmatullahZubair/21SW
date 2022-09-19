@@ -1,3 +1,5 @@
+//This is a comment by Asmatullah Created on 19-09-2022
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,6 +20,7 @@ public class GuiFrame {
 		JLabel label = new JLabel();
 		JButton button = new JButton();
 		JLabel label2 = new JLabel();
+		JLabel label3 = new JLabel();
 		
 		frame.setVisible(true);
 		frame.setBounds(50, 40, 800, 500);
