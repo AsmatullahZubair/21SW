@@ -19,6 +19,7 @@ public class GuiFrame {
 		JTextField textField = new JTextField();
 		JLabel label = new JLabel();
 		JButton button = new JButton();
+		JButton button2 = new JButton();
 		JLabel label2 = new JLabel();
 		JLabel label3 = new JLabel();
 		
@@ -32,12 +33,15 @@ public class GuiFrame {
 		label.setText("Enter Value:");
 		textField.setColumns(20);
 		button.setText("Click");
+		button2.setText("Save");
+		
 		label2.setText("F");
 		
 		panel.add(label);
 		panel.add(textField);
 		panel.add(button);
 		panel.add(label2);
+		panel.add(button2);
 		frame.add(panel);
 
 		button.addActionListener(new ActionListener() {
@@ -58,6 +62,28 @@ public class GuiFrame {
 				
 			}
 		});
+		
+
+		button2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				try {
+				String temperature = textField.getText();
+				Float celsius = Float.parseFloat(temperature);
+				Float fahrenhiet = (float)(celsius*1.8)+32;
+				String temp = fahrenhiet+"F";
+				label2.setText(temp);
+				}
+				catch (NumberFormatException nfe) {
+					JOptionPane.showMessageDialog(frame, "Please enter temperature");
+				}
+				
+			}
+		});
+
+		
 		
 		
 		
